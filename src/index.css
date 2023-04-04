@@ -14,7 +14,7 @@
   --font-md: 1rem;
 
   --light-color:#ffffff;
-  --light-alt-color: #e5e5e5;
+  --light-alt-color: #ccaeae;
   --theme-color: #fca311;
   --dark-color: #14213d;
   --black-color: #000000;
@@ -37,6 +37,7 @@ body{
   background-position: center;
   background-repeat: no-repeat;
   color: var(--light-color);
+  transition: all 0.5s ease-out;
 }
 
 body::before {

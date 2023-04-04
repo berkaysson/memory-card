@@ -1,5 +1,5 @@
-const InfaBar = ({text}) => {
+const InfoBar = ({text}) => {
   return <p>{text}</p>
 }
 
-export default InfaBar;
+export default InfoBar;

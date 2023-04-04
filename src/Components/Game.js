@@ -6,15 +6,6 @@ import images from "../Data/MemoryCardsData";
 import InfoBar from "./InfoBar";
 import ModalGame from "./ModalGame";
 
-const GameWrapper = styled.div`
-  display: grid;
-  grid-template-columns:repeat(4,202px);
-  grid-template-rows:repeat(2,1fr);
-  justify-content:center;
-  align-items:center;
-  gap:1rem;
-`
-
 const Game = () => {
   const [currentCards, setcurrentCards] = useState([]);
   const [infoText, setInfoText] = useState('Challenge yourself and improve your memory!');
@@ -97,12 +88,29 @@ const Game = () => {
   }
 
   return (
-    <div>
+    <GameWrapper>
       <ScoreBoard score={score} bestScore={bestScore}/>
       <InfoBar text={infoText}/>
-      <GameWrapper>{gameContent}</GameWrapper>
-    </div>
+      <GameContentWrapper>{gameContent}</GameContentWrapper>
+    </GameWrapper>
   );
 };
 
 export default Game;
+
+
+const GameContentWrapper = styled.div`
+  display: grid;
+  grid-template-columns:repeat(4,202px);
+  grid-template-rows:repeat(2,1fr);
+  justify-content:center;
+  align-items:center;
+  gap:var(--gap);
+`
+const GameWrapper = styled.div`
+  text-align:center;
+  padding:var(--padding-lg);
+  border-radius:var(--button-border-radius);
+  box-shadow: rgba(256, 256, 256, 0.4) 0px 0px 8px, rgba(256, 256, 256, 0.3) 0px 0px 8px -1px, rgba(256, 256, 256, 0.2) 0px -3px 0px inset;
+  backdrop-filter: blur(10px) brightness(2.5) contrast(0.9);
+`

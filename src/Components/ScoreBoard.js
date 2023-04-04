@@ -1,8 +1,18 @@
+import styled from "styled-components";
+
 const ScoreBoard = ({score, bestScore}) => {
-  return <div>
+  return <ScoreBoardWrapper>
     <div>Current Score: <span>{score}</span></div>
     <div>Best Score: <span>{bestScore}</span></div>
-  </div>
+  </ScoreBoardWrapper>
 }
+
+const ScoreBoardWrapper = styled.div`
+  display: flex;
+  flex-direction:row ;
+  justify-content:space-between;
+  align-items: center;
+  font-size:var(--font-lg);
+`
 
 export default ScoreBoard;

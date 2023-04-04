@@ -1,7 +1,11 @@
-const ModalGame = ({onRestart}) => {
-  return (<div>
-    <button onClick={onRestart}>New Game</button>
-  </div>)
-}
+import Button from "../UI/Button";
+
+const ModalGame = ({ onRestart }) => {
+  return (
+    <div>
+      <Button onClick={onRestart} text={"New Game"} />
+    </div>
+  );
+};
 
 export default ModalGame;

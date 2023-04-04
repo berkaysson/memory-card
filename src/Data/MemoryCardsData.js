@@ -13,6 +13,6 @@ function importAll(r) {
   });
 }
 
-importAll(require.context('./Images', false, /\.(png|jpe?g|svg)$/));
+importAll(require.context('./Images/Cards', false, /\.(png|jpe?g|svg)$/));
 
 export default images;

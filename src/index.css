@@ -12,8 +12,21 @@
   --font-xlg: 2.5rem;
   --font-sl: 0.8rem;
   --font-md: 1rem;
+
+  --light-color:#ffffff;
+  --light-alt-color: #e5e5e5;
+  --theme-color: #fca311;
+  --dark-color: #14213d;
+  --black-color: #000000;
 }
 
 html{
   font-family: 'Quicksand', sans-serif;
+}
+
+body{
+  height: 100%;
+  background-image: url('./Data/Images/background-image.jpg');
+  background-size: cover;
+  background-position: center;
 }

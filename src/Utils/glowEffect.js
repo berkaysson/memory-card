@@ -5,22 +5,22 @@ const glowEffect = (color, type, inset=false) => {
 
   return keyframes`
     0% {
-      ${type}-shadow: 0 0 8px var(--ls-${color}) ${insetTrue};
-    }
-    20% {
       ${type}-shadow: 0 0 10px var(--ls-${color}) ${insetTrue};
     }
+    20% {
+      ${type}-shadow: 0 0 12px var(--ls-${color}) ${insetTrue};
+    }
     40% {
-      ${type}-shadow: 0 0 13px var(--ls-${color}) ${insetTrue};
+      ${type}-shadow: 0 0 14px var(--ls-${color}) ${insetTrue};
     }
     60% {
       ${type}-shadow: 0 0 13px var(--ls-${color}) ${insetTrue};
     }
     80% {
-      ${type}-shadow: 0 0 10px var(--ls-${color}) ${insetTrue};
+      ${type}-shadow: 0 0 12px var(--ls-${color}) ${insetTrue};
     }
     100% {
-      ${type}-shadow: 0 0 8px var(--ls-${color}) ${insetTrue};
+      ${type}-shadow: 0 0 10px var(--ls-${color}) ${insetTrue};
     }
   `;
 };

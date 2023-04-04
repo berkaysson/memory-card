@@ -9,7 +9,7 @@
   --button-border-radius: 8px;
 
   --font-lg: 1.3rem;
-  --font-xlg: 2.5rem;
+  --font-xlg: 3rem;
   --font-sl: 0.8rem;
   --font-md: 1rem;
 
@@ -18,6 +18,11 @@
   --theme-color: #fca311;
   --dark-color: #14213d;
   --black-color: #000000;
+
+  --ls-green: rgb(47,249,36);
+  --ls-red: rgb(235,33,46);
+  --ls-blue: rgb(0,140,255);
+  --ls-purple: rgb(115,0,255);
 }
 
 html{

@@ -1,4 +1,3 @@
-import './App.css';
 import Game from './Components/Game';
 import Header from './Components/Header';
 import styled from 'styled-components';

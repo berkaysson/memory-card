@@ -19,7 +19,7 @@ const Game = () => {
   const [currentCards, setcurrentCards] = useState([]);
   const [infoText, setInfoText] = useState('Challenge yourself and improve your memory!');
   const [score, setScore] = useState(0);
-  const [bestScore, setBestScore] = useState(0);
+  const [bestScore, setBestScore] = useState(parseInt(localStorage.getItem("bestScore")) || 0);
   const [gameContent, setGameContent] = useState(currentCards);
   
   let cards = [];
@@ -29,14 +29,17 @@ const Game = () => {
   useEffect(() => {
     setRandomCards();
     setcurrentCards(cards);
-  }, []);
+  }, []); // not a problem
 
   useEffect(()=>{
     setGameContent(currentCards);
   }, [currentCards])
 
   useEffect(()=>{
-    if(score>bestScore) setBestScore(score);
+    if(score>bestScore){
+      localStorage.setItem("bestScore", score);
+      setBestScore(score);
+    }
   }, [bestScore, score])
 
   const onClickCard = (img) => {

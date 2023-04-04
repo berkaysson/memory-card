@@ -58,6 +58,7 @@ const Game = () => {
     images.forEach(img => {
       img.selected = false;
     });
+    setInfoText('Challenge yourself and improve your memory!');
     setRandomCards();
     setScore(0);
     setcurrentCards(cards);
@@ -109,7 +110,7 @@ const GameContentWrapper = styled.div`
 `
 const GameWrapper = styled.div`
   text-align:center;
-  padding:var(--padding-lg);
+  padding:calc(var(--padding-lg)/1.25) var(--padding-lg) ;
   border-radius:var(--button-border-radius);
   box-shadow: rgba(256, 256, 256, 0.4) 0px 0px 8px, rgba(256, 256, 256, 0.3) 0px 0px 8px -1px, rgba(256, 256, 256, 0.2) 0px -3px 0px inset;
   backdrop-filter: blur(10px) brightness(2.5) contrast(0.9);

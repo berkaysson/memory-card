@@ -50,7 +50,7 @@ const Game = () => {
       setGameContent(<ModalGame onRestart={resetGame} />);
       return;
     }
-    document.getElementById("game-content").classList.add("animate"); // make function animate()
+    document.getElementById("game-content").classList.add("animate");
     setTimeout(() => {
       cards = shuffleCards(cards);
       setcurrentCards(cards);
@@ -69,19 +69,14 @@ const Game = () => {
     images.forEach((img) => {
       img.selected = false;
     });
-    setInfoText("Challenge yourself and improve your memory!");
-    setRandomCards();
-    setScore(0);
-    setcurrentCards(cards);
-    // restart animation
-    // document.getElementById("game-content").classList.add("animate"); 
-    // setTimeout(() => {
-    //   setInfoText("Challenge yourself and improve your memory!");
-    //   setRandomCards();
-    //   setScore(0);
-    //   setcurrentCards(cards);
-    //   document.getElementById("game-content").classList.remove("animate");
-    // }, 280);
+    document.getElementById("game-content").classList.add("start-animate"); 
+    setTimeout(() => {
+      setInfoText("Challenge yourself and improve your memory!");
+      setRandomCards();
+      setScore(0);
+      setcurrentCards(cards);
+      document.getElementById("game-content").classList.remove("start-animate");
+    }, 200);
   };
 
   const isFail = (img) => {
@@ -120,6 +115,27 @@ const Game = () => {
 export default Game;
 
 const GameContentWrapper = styled.div`
+  @keyframes tornado {
+    0% {
+      transform: scale(1);
+    }
+    25% {
+      transform: scale(0.5);
+      filter: blur(5px);
+    }
+    50% {
+      transform: scale(0);
+      filter: blur(10px);
+    }
+    75% {
+      transform: scale(0.5);
+      filter: blur(5px);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
   display: grid;
   grid-template-columns: repeat(4, 202px);
   grid-template-rows: repeat(2, 1fr);
@@ -128,29 +144,13 @@ const GameContentWrapper = styled.div`
   gap: 2rem;
 
   &.animate {
-    @keyframes tornado {
-      0% {
-        transform: scale(1);
-      }
-      25%{
-        transform: scale(0.5);
-        filter: blur(5px);
-      }
-      50% {
-        transform: scale(0);
-        filter: blur(10px);
-      }
-      75%{
-        transform: scale(0.5);
-        filter: blur(5px);
-      }
-      100% {
-        transform: scale(1);
-      }
-    }
-
     animation: tornado 0.3s linear infinite;
   }
+
+  &.start-animate {
+    animation: tornado 0.4s linear infinite;
+  }
+
 `;
 const GameWrapper = styled.div`
   text-align: center;

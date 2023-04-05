@@ -8,4 +8,5 @@ export default InfoBar;
 
 const InfoWrapper = styled.p`
   font-size: var(--font-lg);
+  padding: var(--padding);
 `

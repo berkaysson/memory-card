@@ -11,7 +11,7 @@ const ModalGame = ({ onRestart }) => {
 
 const Modal = styled.div`
   display: flex;
-  margin-top:2rem ;
+  margin-top:var(--margin);
   justify-content:center;
   align-items: center;
   grid-column: 1/5 ;

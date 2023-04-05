@@ -11,6 +11,7 @@ const H1Wrapper = styled.h1`
   font-size: var(--font-xlg);
   text-shadow: 0px 0px 10px rgba(252, 163, 17, 1);
   animation: ${glowEffect('purple','text')} 2s linear infinite;
+  padding: var(--padding);
 `
 
 export default Header;

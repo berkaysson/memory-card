@@ -24,7 +24,7 @@ const Game = () => {
   useEffect(() => {
     setRandomCards();
     setcurrentCards(cards);
-  }, []); // not a problem
+  }, []);
 
   useEffect(() => {
     setGameContent(currentCards);
@@ -40,14 +40,14 @@ const Game = () => {
   const onClickCard = (img) => {
     if (isFail(img)) {
       setInfoText("You lose!");
-      setGameContent(<ModalGame onRestart={resetGame} />);
+      setGameContent(newGameContent);
       return;
     }
     img.selected = true;
-    setScore((prevScore) => prevScore + 1); //use localStorage
+    setScore((prevScore) => prevScore + 1);
     if (checkWin()) {
       setInfoText("You did it, You Win !");
-      setGameContent(<ModalGame onRestart={resetGame} />);
+      setGameContent(newGameContent);
       return;
     }
     document.getElementById("game-content").classList.add("animate");
@@ -76,7 +76,7 @@ const Game = () => {
       setScore(0);
       setcurrentCards(cards);
       document.getElementById("game-content").classList.remove("start-animate");
-    }, 200);
+    }, 250);
   };
 
   const isFail = (img) => {
@@ -102,6 +102,8 @@ const Game = () => {
       return <MemoryCard key={index} img={randomImage} onClick={onClickCard} />;
     });
   };
+
+  let newGameContent = <ModalGame onRestart={resetGame} />;
 
   return (
     <GameWrapper>
@@ -137,11 +139,11 @@ const GameContentWrapper = styled.div`
   }
 
   display: grid;
-  grid-template-columns: repeat(4, 202px);
+  grid-template-columns: repeat(4, calc(var(--card-width) + 2px));
   grid-template-rows: repeat(2, 1fr);
   justify-content: center;
   align-items: center;
-  gap: 2rem;
+  gap: var(--gap);
 
   &.animate {
     animation: tornado 0.3s linear infinite;
@@ -149,6 +151,11 @@ const GameContentWrapper = styled.div`
 
   &.start-animate {
     animation: tornado 0.4s linear infinite;
+  }
+
+  @media screen and (max-width: 775px){
+    grid-template-columns: repeat(2, calc(var(--card-width) + 2px));
+    grid-template-rows: repeat(2, 1fr);
   }
 
 `;

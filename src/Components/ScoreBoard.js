@@ -13,6 +13,7 @@ const ScoreBoardWrapper = styled.div`
   justify-content:space-between;
   align-items: center;
   font-size:var(--font-lg);
+  padding: var(--padding);
 `
 
 export default ScoreBoard;

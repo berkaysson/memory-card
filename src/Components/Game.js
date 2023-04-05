@@ -106,7 +106,7 @@ const GameContentWrapper = styled.div`
   grid-template-rows:repeat(2,1fr);
   justify-content:center;
   align-items:center;
-  gap:var(--gap);
+  gap:2rem;
 `
 const GameWrapper = styled.div`
   text-align:center;

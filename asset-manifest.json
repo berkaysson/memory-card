@@ -1,14 +1,46 @@
 {
   "files": {
     "main.css": "/memory-card/static/css/main.9cb0b8b9.css",
-    "main.js": "/memory-card/static/js/main.db3ceb0a.js",
+    "main.js": "/memory-card/static/js/main.ebbe09db.js",
     "static/media/background-image.jpg": "/memory-card/static/media/background-image.2f40fb5920ebbaa3e0f2.jpg",
+    "static/media/solo.jpg": "/memory-card/static/media/solo.4c14beb4a355cc280e56.jpg",
+    "static/media/jabba.jpg": "/memory-card/static/media/jabba.96be34ccbda41474369f.jpg",
+    "static/media/yoda.jpg": "/memory-card/static/media/yoda.721b7546b26288ddb0d6.jpg",
+    "static/media/chewbacca.jpg": "/memory-card/static/media/chewbacca.bab3be84257e3f37278e.jpg",
+    "static/media/quikon.jpg": "/memory-card/static/media/quikon.51ab95244a78431a345d.jpg",
+    "static/media/mando.jpg": "/memory-card/static/media/mando.d62743bc06cb3a86c678.jpg",
+    "static/media/padme.jpg": "/memory-card/static/media/padme.025a42d31c64500f2656.jpg",
+    "static/media/dooku.jpg": "/memory-card/static/media/dooku.81289de499b7aa96ac25.jpg",
+    "static/media/r2d2.jpg": "/memory-card/static/media/r2d2.687024ab46e86b12b95f.jpg",
+    "static/media/luke.jpg": "/memory-card/static/media/luke.939efa59368d4f7f3a0c.jpg",
+    "static/media/bb-8.jpg": "/memory-card/static/media/bb-8.56fb8ce46330e1ab4753.jpg",
+    "static/media/chadc3po.jpg": "/memory-card/static/media/chadc3po.43c3174d25597ed7e9d4.jpg",
+    "static/media/leia.jpg": "/memory-card/static/media/leia.57cc03943f5eb876bc5d.jpg",
+    "static/media/ahsoka.jpg": "/memory-card/static/media/ahsoka.bdb98df088ab4d070daa.jpg",
+    "static/media/palpatine.jpg": "/memory-card/static/media/palpatine.2b6d0680e5300de13dc4.jpg",
+    "static/media/asajj.jpg": "/memory-card/static/media/asajj.caf4b709b30be214b439.jpg",
+    "static/media/K-2SO.jpg": "/memory-card/static/media/K-2SO.a9a8cf58762576fab18c.jpg",
+    "static/media/grevious.jpg": "/memory-card/static/media/grevious.505a19062d0ae92793d3.jpg",
+    "static/media/jynerso.jpg": "/memory-card/static/media/jynerso.8084d467e4bc78cd0c67.jpg",
+    "static/media/obiwan.jpg": "/memory-card/static/media/obiwan.a504385e2c500f77095b.jpg",
+    "static/media/windu.jpg": "/memory-card/static/media/windu.68f5d65d1570f5a2d361.jpg",
+    "static/media/anakin.jpg": "/memory-card/static/media/anakin.13a50fce9979b18a6505.jpg",
+    "static/media/grogu.jpg": "/memory-card/static/media/grogu.103370198da4cc1df67b.jpg",
+    "static/media/vader.jpg": "/memory-card/static/media/vader.f15c91d49fab91b0f133.jpg",
+    "static/media/rex.jpg": "/memory-card/static/media/rex.c8b6200a11d8ce8cbcee.jpg",
+    "static/media/bobafett.jpg": "/memory-card/static/media/bobafett.7d1059711a84dde9b4ce.jpg",
+    "static/media/maul.jpg": "/memory-card/static/media/maul.dee199002f6ff80e0184.jpg",
+    "static/media/sawgerrera.jpg": "/memory-card/static/media/sawgerrera.493935bf509a0dd938d4.jpg",
+    "static/media/andor.jpg": "/memory-card/static/media/andor.be49a515be04b3092229.jpg",
+    "static/media/cadbane.jpg": "/memory-card/static/media/cadbane.ef7086e8191b6994b709.jpg",
+    "static/media/lando.jpg": "/memory-card/static/media/lando.570dd381d8d96edfab4a.jpg",
+    "static/media/tarkin.jpg": "/memory-card/static/media/tarkin.f15e6a2ec449263b4682.jpg",
     "index.html": "/memory-card/index.html",
     "main.9cb0b8b9.css.map": "/memory-card/static/css/main.9cb0b8b9.css.map",
-    "main.db3ceb0a.js.map": "/memory-card/static/js/main.db3ceb0a.js.map"
+    "main.ebbe09db.js.map": "/memory-card/static/js/main.ebbe09db.js.map"
   },
   "entrypoints": [
     "static/css/main.9cb0b8b9.css",
-    "static/js/main.db3ceb0a.js"
+    "static/js/main.ebbe09db.js"
   ]
 }

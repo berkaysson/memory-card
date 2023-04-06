@@ -1,10 +1,10 @@
 import Button from "../UI/Button";
 import styled from "styled-components";
 
-const ModalGame = ({ onRestart }) => {
+const ModalGame = ({ onRestart, isWin }) => {
   return (
     <Modal>
-      <Button onClick={onRestart} text={"New Game"} />
+      <Button onClick={()=>onRestart(isWin)} text={"New Game"} />
     </Modal>
   );
 };

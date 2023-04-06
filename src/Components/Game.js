@@ -40,14 +40,14 @@ const Game = () => {
   const onClickCard = (img) => {
     if (isFail(img)) {
       setInfoText("You lose!");
-      setGameContent(newGameContent);
+      setGameContent(<ModalGame onRestart={resetGame}  isWin={false}/>);
       return;
     }
     img.selected = true;
     setScore((prevScore) => prevScore + 1);
     if (checkWin()) {
-      setInfoText("You did it, You Win !");
-      setGameContent(newGameContent);
+      setInfoText("You did it, You Win! You can still imrpvve your Best Score.");
+      setGameContent(<ModalGame onRestart={resetGame} isWin={true} />);
       return;
     }
     document.getElementById("game-content").classList.add("animate");
@@ -55,7 +55,7 @@ const Game = () => {
       cards = shuffleCards(cards);
       setcurrentCards(cards);
       document.getElementById("game-content").classList.remove("animate");
-    }, 280);
+    }, 200);
   };
 
   const checkWin = () => {
@@ -65,7 +65,7 @@ const Game = () => {
     return true;
   };
 
-  const resetGame = () => {
+  const resetGame = (isWin) => {
     images.forEach((img) => {
       img.selected = false;
     });
@@ -73,7 +73,7 @@ const Game = () => {
     setTimeout(() => {
       setInfoText("Challenge yourself and improve your memory!");
       setRandomCards();
-      setScore(0);
+      if(!isWin) setScore(0);
       setcurrentCards(cards);
       document.getElementById("game-content").classList.remove("start-animate");
     }, 250);
@@ -94,6 +94,7 @@ const Game = () => {
   };
 
   const setRandomCards = () => {
+    console.log(images)
     let uniqueCards = [...images];
     cards = [...Array(CARD_NUMBER)].map((_, index) => {
       const randomIndex = Math.floor(Math.random() * uniqueCards.length);
@@ -102,8 +103,6 @@ const Game = () => {
       return <MemoryCard key={index} img={randomImage} onClick={onClickCard} />;
     });
   };
-
-  let newGameContent = <ModalGame onRestart={resetGame} />;
 
   return (
     <GameWrapper>

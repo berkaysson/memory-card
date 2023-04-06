@@ -4,7 +4,6 @@ const MemoryCardWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: ;
   cursor: pointer;
   height: calc(var(--card-width) + 32px); //img width + 32px(16*2)
   padding-top: var(--padding);

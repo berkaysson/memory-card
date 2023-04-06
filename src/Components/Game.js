@@ -46,7 +46,7 @@ const Game = () => {
     img.selected = true;
     setScore((prevScore) => prevScore + 1);
     if (checkWin()) {
-      setInfoText("You did it, You Win! You can still imrpvve your Best Score.");
+      setInfoText("You did it, You Win! You can still improve your Best Score.");
       setGameContent(<ModalGame onRestart={resetGame} isWin={true} />);
       return;
     }

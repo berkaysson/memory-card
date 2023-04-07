@@ -7,7 +7,7 @@ const MemoryCardWrapper = styled.div`
   cursor: pointer;
   height: calc(var(--card-width) + 32px); //img width + 32px(16*2)
   padding-top: var(--padding);
-  border-radius: var(--button-border-radius);
+  border-radius: var(--card-border-radius);
   box-shadow: rgba(0, 0, 0, 0.6) 0px -20px 28px 0px inset,
     rgba(150, 150, 25, 0.4) 0px -40px 25px 0px inset,
     rgba(150, 150, 25, 0.5) 0px -72px 40px 0px inset,
@@ -28,8 +28,8 @@ const MemoryCardWrapper = styled.div`
     aspect-ratio: 1/1;
     width: var(--card-width);
     height: auto;
-    border-bottom-left-radius: var(--button-border-radius);
-    border-bottom-right-radius: var(--button-border-radius);
+    border-bottom-left-radius: var(--card-border-radius);
+    border-bottom-right-radius: var(--card-border-radius);
     filter: brightness(0.9) invert(12%);
   }
 `;
@@ -37,7 +37,7 @@ const MemoryCardWrapper = styled.div`
 const MemoryCard = ({ img, onClick }) => {
   return (
     <MemoryCardWrapper onClick={() => onClick(img)}>
-      {img.name}
+      {img.name.charAt(0).toUpperCase() + img.name.slice(1)}
       <img src={img.imagePath} alt="memoryCard" />
     </MemoryCardWrapper>
   );

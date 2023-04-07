@@ -32,6 +32,13 @@ const MemoryCardWrapper = styled.div`
     border-bottom-right-radius: var(--card-border-radius);
     filter: brightness(0.9) invert(12%);
   }
+
+  @media screen and (max-width: 900px){
+    &:hover {
+    transform: none;
+  }
+}
+
 `;
 
 const MemoryCard = ({ img, onClick }) => {
